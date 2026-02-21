@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zenti</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: monospace;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .nickname {
+            color: #b700ff; /* фиолетовый */
+            font-size: 4rem;
+            font-weight: bold;
+            letter-spacing: 10px; /* расстояние между квадратиками */
+            text-shadow: 0 0 15px #b700ff, 0 0 30px #8a2be2;
+            margin-bottom: 40px; /* отступ снизу */
+            margin-left: 10ch; /* отступ слева (10 пробелов примерно) */
+        }
+        .description {
+            color: #c0a0ff;
+            font-size: 1.5rem;
+            border-top: 1px solid #6a0dad;
+            padding-top: 30px;
+            margin-left: 10ch; /* такой же отступ слева */
+            white-space: pre-wrap;
+            line-height: 1.6;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .square-effect {
+            display: inline-block;
+            background-color: #b700ff;
+            width: 0.8em;
+            height: 0.8em;
+            margin: 0 2px;
+            box-shadow: 0 0 10px #b700ff;
+        }
+        /* добавим квадратики между буквами псевдоэлементами, но проще сделаем через spans позже */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nickname">
+            <!-- Имитация квадратиков: каждая буква как бы в квадрате, но мы сделаем через символы с фоном -->
+            <span class="square-effect"></span><span class="square-effect"></span> zenti <span class="square-effect"></span><span class="square-effect"></span>
+            <!-- Но так как просили именно ник из квадратиков, я сделаю через символ █ с фиолетовым цветом -->
+        </div>
+        <div class="description">
+            без принципов,<br>
+            деньги не настоящие<br>
+            карты не мои<br>
+            документы поддельные
+        </div>
+    </div>
+
+    <!-- Финальный штрих: настоящий ник из фиолетовых квадратиков -->
+    <div style="position: fixed; bottom: 10px; left: 10ch; color: #a0f; font-size: 2rem; letter-spacing: 5px;">
+
