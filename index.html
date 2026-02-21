@@ -5,66 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zenti</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             background-color: black;
             color: white;
-            font-family: monospace;
-            margin: 0;
+            font-family: 'Courier New', monospace;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: left;
+            text-align: center;
+            padding: 20px;
         }
-        .container {
-            max-width: 800px;
-        }
-        .nickname {
-            color: #b700ff; /* фиолетовый */
-            font-size: 4rem;
+        h1 {
+            font-size: 5rem;
             font-weight: bold;
-            letter-spacing: 10px; /* расстояние между квадратиками */
+            color: #b700ff;
             text-shadow: 0 0 15px #b700ff, 0 0 30px #8a2be2;
-            margin-bottom: 40px; /* отступ снизу */
-            margin-left: 10ch; /* отступ слева (10 пробелов примерно) */
-        }
-        .description {
-            color: #c0a0ff;
-            font-size: 1.5rem;
-            border-top: 1px solid #6a0dad;
-            padding-top: 30px;
-            margin-left: 10ch; /* такой же отступ слева */
-            white-space: pre-wrap;
-            line-height: 1.6;
+            letter-spacing: 10px;
+            margin-bottom: 30px;
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
-        .square-effect {
-            display: inline-block;
-            background-color: #b700ff;
-            width: 0.8em;
-            height: 0.8em;
-            margin: 0 2px;
-            box-shadow: 0 0 10px #b700ff;
+        .main-text {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: #e0b0ff;
+            margin-bottom: 40px;
+            max-width: 800px;
+            border-left: 3px solid #b700ff;
+            border-right: 3px solid #b700ff;
+            padding: 20px 30px;
+            font-style: italic;
         }
-        /* добавим квадратики между буквами псевдоэлементами, но проще сделаем через spans позже */
+        .ip-message {
+            font-size: 1.5rem;
+            color: #ff66cc;
+            margin-bottom: 60px;
+            text-shadow: 0 0 10px #ff00aa;
+            background: rgba(180, 0, 255, 0.2);
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: 1px dashed #b700ff;
+            backdrop-filter: blur(2px);
+        }
+        .footer {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .footer a {
+            color: #888;
+            text-decoration: none;
+            border-bottom: 1px dotted #555;
+        }
+        .footer a:hover {
+            color: #b700ff;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 3rem; }
+            .main-text { font-size: 1.2rem; }
+            .ip-message { font-size: 1rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="nickname">
-            <!-- Имитация квадратиков: каждая буква как бы в квадрате, но мы сделаем через символы с фоном -->
-            <span class="square-effect"></span><span class="square-effect"></span> zenti <span class="square-effect"></span><span class="square-effect"></span>
-            <!-- Но так как просили именно ник из квадратиков, я сделаю через символ █ с фиолетовым цветом -->
-        </div>
-        <div class="description">
-            без принципов,<br>
-            деньги не настоящие<br>
-            карты не мои<br>
-            документы поддельные
-        </div>
+    <h1>zenti</h1>
+    
+    <div class="main-text">
+        минимально принципов и этики.<br>
+        деньги фальшивые, документы не настоящие,<br>
+        карты не мои
     </div>
-
-    <!-- Финальный штрих: настоящий ник из фиолетовых квадратиков -->
-    <div style="position: fixed; bottom: 10px; left: 10ch; color: #a0f; font-size: 2rem; letter-spacing: 5px;">
-
+    
+    <div class="ip-message">
+        спасибо, что посетил мой сайт,<br>
+        а я пошел смотреть твой айпи по бд))
+    </div>
+    
+    <div class="footer">
+        This site was made with ❤️ for GitHub<br>
+        <a href="https://tilda.cc" target="_blank">original on Tilda</a>
+    </div>
+</body>
+</html>
